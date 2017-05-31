@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  currentComponent: string;
+
+  onNavigationEvent(destination: {newDestination: string}) {
+    this.currentComponent = destination.newDestination;
+
+  }
 }
